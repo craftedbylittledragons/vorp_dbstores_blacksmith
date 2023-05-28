@@ -14,33 +14,162 @@ Config.defaultlang = "en_lang"
        -- open stores
 Config.Key = 0x760A9C6F --[G]
 
+Config.PriceMultiplier = 0.11
+Config.StoreType = "blacksmith" -- flag field in your items database, change with caution
+
+--Webhook Section, description is in translation
+Config.UseWebhook = true -- Use webhook
+
+--Mandatory Webhook Parts
+Config.WebhookTitle = "Blacksmith Transactions"
+Config.Webhook = "https://discord.com/api/webhooks/1110061327612903445/Omw1z6dFZiBPu3RKO_EzIOQsvX4SP0oaaFbFK3pFRi0bxZ7c10CzEOXj7AFj5Soa0bSq"
+
+--Optional Webhook Parts, if not filled will default vorp_core config
+Config.WebhookColor = ""
+Config.WebhookName = ""
+Config.WebhookLogo = ""
+Config.WebhookLogo2 = ""
+Config.WebhookAvatar = ""
+
     --- STORES ---
 
 Config.Stores = {
 -----------------------------------------------------------------------------
 --------------------------------------Armadillo------------------------------
 -----------------------------------------------------------------------------
-   
+  
+    ArmadilloBlacksmith = {
+        blipAllowed = true,
+        BlipName = "Blacksmith Shop",
+        storeName = "Armadillo Blacksmith Shop",
+        PromptName = "Blacksmith Shop",
+        sprite = -758970771,
+        x = -3677.72, y = -2563.18, z = -13.56, h= 206.74,
+        distanceOpenStore = 3.0,
+        NpcAllowed = true,
+        NpcModel = "S_M_M_LiveryWorker_01",
+        AllowedJobs = {}, -- jobs allowed
+        JobGrade = 0,
+        category = { "Tools" }, -- you need to add the same words to the buyitems and buyitems category you can add new categories as long the items have the category names
+        storeType = {  "Buy","Sell" }, -- choose the storetype if you translate this you must do the same in the client.lua file
+        StoreHoursAllowed = false, -- if you want the stores to use opening and closed hours
+        RandomPrices = false,
+        StoreOpen = 7, -- am
+        StoreClose = 21 -- pm
+
+    }, 
 -----------------------------------------------------------------------------
 --------------------------------------Blackwater-----------------------------
 -----------------------------------------------------------------------------   
-    
+    BlackwaterBlacksmith = {
+        blipAllowed = true,
+        BlipName = "Blacksmith Shop",
+        storeName = "Blackwater Blacksmith Shop",
+        PromptName = "Blacksmith Shop",
+        sprite = -758970771,
+        x = -869.37, y = -1395.32, z = 43.53, h= 87.46,
+        distanceOpenStore = 3.0,
+        NpcAllowed = true,
+        NpcModel = "S_M_M_LiveryWorker_01",
+        AllowedJobs = {}, -- jobs allowed
+        JobGrade = 0,
+        category = { "Tools" }, -- you need to add the same words to the buyitems and buyitems category you can add new categories as long the items have the category names
+        storeType = {  "Buy","Sell" }, -- choose the storetype if you translate this you must do the same in the client.lua file
+        StoreHoursAllowed = false, -- if you want the stores to use opening and closed hours
+        RandomPrices = false,
+        StoreOpen = 7, -- am
+        StoreClose = 21 -- pm
+    }, 
 -----------------------------------------------------------------------------
 --------------------------------------Rhodes---------------------------------
 -----------------------------------------------------------------------------  
- 
+    RhodesBlacksmith = {
+        blipAllowed = true,
+        BlipName = "Blacksmith Shop",
+        storeName = "Rhodes Blacksmith Shop",
+        PromptName = "Blacksmith Shop",
+        sprite = -758970771,
+        x = 1313.65, y = -1348.8, z = 77.57, h = 169.07,
+        distanceOpenStore = 3.0,
+        NpcAllowed = true,
+        NpcModel = "S_M_M_LiveryWorker_01",
+        AllowedJobs = {}, -- jobs allowed
+        JobGrade = 0,
+        category = { "Tools" }, -- you need to add the same words to the buyitems and buyitems category you can add new categories as long the items have the category names
+        storeType = {  "Buy","Sell" }, -- choose the storetype if you translate this you must do the same in the client.lua file
+        StoreHoursAllowed = false, -- if you want the stores to use opening and closed hours
+        RandomPrices = false,
+        StoreOpen = 7, -- am
+        StoreClose = 21 -- pm
+    }, 
 -----------------------------------------------------------------------------
 --------------------------------------St-Denis-------------------------------
 -----------------------------------------------------------------------------  
- 
+    StDenisBlacksmith = {
+        blipAllowed = true,
+        BlipName = "Blacksmith Shop",
+        storeName = "St-Denis Blacksmith Shop",
+        PromptName = "Blacksmith Shop",
+        sprite = -758970771,
+        x = 2512.3, y = -1456.31, z = 46.31, h= 106.74 ,
+        distanceOpenStore = 3.0,
+        NpcAllowed = true,
+        NpcModel = "S_M_M_LiveryWorker_01",
+        AllowedJobs = {}, -- jobs allowed
+        JobGrade = 0,
+        category = { "Tools" }, -- you need to add the same words to the buyitems and buyitems category you can add new categories as long the items have the category names
+        storeType = {  "Buy","Sell" }, -- choose the storetype if you translate this you must do the same in the client.lua file
+        StoreHoursAllowed = false, -- if you want the stores to use opening and closed hours
+        RandomPrices = false,
+        StoreOpen = 7, -- am
+        StoreClose = 21 -- pm
+    }, 
 -----------------------------------------------------------------------------
 --------------------------------------Strawberry-----------------------------
 -----------------------------------------------------------------------------
- 
+    StrawbBlacksmith = {
+        blipAllowed = true,
+        BlipName = "Blacksmith Shop",
+        storeName = "Strawberry Blacksmith Shop",
+        PromptName = "Blacksmith Shop",
+        sprite = -758970771,
+        x = -1822.83, y = -570.72, z = 156.01, h= 223.04 ,
+        distanceOpenStore = 3.0,
+        NpcAllowed = true,
+        NpcModel = "S_M_M_LiveryWorker_01",
+        AllowedJobs = {}, -- jobs allowed
+        JobGrade = 0,
+        category = { "Tools" }, -- you need to add the same words to the buyitems and buyitems category you can add new categories as long the items have the category names
+        storeType = {  "Buy","Sell" }, -- choose the storetype if you translate this you must do the same in the client.lua file
+        StoreHoursAllowed = false, -- if you want the stores to use opening and closed hours
+        RandomPrices = false,
+        StoreOpen = 7, -- am
+        StoreClose = 21 -- pm
+
+    }, 
 -----------------------------------------------------------------------------
 --------------------------------------Tumbleweed-----------------------------
 -----------------------------------------------------------------------------
-  
+    TumbleBlacksmith = {
+        blipAllowed = true,
+        BlipName = "Blacksmith Shop",
+        storeName = "Tumbleweed Blacksmith Shop",
+        PromptName = "Blacksmith Shop",
+        sprite = -758970771,
+        x = -5513.68, y = -3039.94, z = -2.39, h =145.6,
+        distanceOpenStore = 3.0,
+        NpcAllowed = true,
+        NpcModel = "S_M_M_LiveryWorker_01",
+        AllowedJobs = {}, -- jobs allowed
+        JobGrade = 0,
+        category = { "Tools" }, -- you need to add the same words to the buyitems and buyitems category you can add new categories as long the items have the category names
+        storeType = {  "Buy","Sell" }, -- choose the storetype if you translate this you must do the same in the client.lua file
+        StoreHoursAllowed = false, -- if you want the stores to use opening and closed hours
+        RandomPrices = false,
+        StoreOpen = 7, -- am
+        StoreClose = 21 -- pm
+
+    }, 
 -----------------------------------------------------------------------------
 --------------------------------------Valentine------------------------------
 -----------------------------------------------------------------------------
@@ -67,7 +196,26 @@ Config.Stores = {
 -----------------------------------------------------------------------------
 --------------------------------------Vanhorn--------------------------------
 -----------------------------------------------------------------------------
- 
+    VanBlacksmith = {
+        blipAllowed = true,
+        BlipName = "Blacksmith Shop",
+        storeName = "Vanhorn Blacksmith Shop",
+        PromptName = "Blacksmith Shop",
+        sprite = -758970771,
+        x = 2930.4, y = 558.28, z = 44.94, h= 303.27,
+        distanceOpenStore = 3.0,
+        NpcAllowed = true,
+        NpcModel = "S_M_M_LiveryWorker_01",
+        AllowedJobs = {}, -- jobs allowed
+        JobGrade = 0,
+        category = { "Tools" }, -- you need to add the same words to the buyitems and buyitems category you can add new categories as long the items have the category names
+        storeType = {  "Buy","Sell" }, -- choose the storetype if you translate this you must do the same in the client.lua file
+        StoreHoursAllowed = false, -- if you want the stores to use opening and closed hours
+        RandomPrices = false,
+        StoreOpen = 7, -- am
+        StoreClose = 21 -- pm
+
+    },
 -----------------------------------------------------------------------------
 --------------------------------------Blackmarket----------------------------
 -----------------------------------------------------------------------------
@@ -86,13 +234,9 @@ Config.Stores = {
     -- desc = a description of the item
     -- category = where the item will be displayed at 
 
-BlackSmith_ShopItems_SELL = {         
+_Items_SELL = {         
        -- Tools
-    { itemLabel = "Plant Trimmer", itemName = "planttrimmer", currencyType = "cash", sellprice = 5, randomprice = math.random(30, 55), desc = "Sell Plant Trimmers", category = "Tools" },
-    { itemLabel = "Garden Hoe", itemName = "hoe", currencyType = "cash", sellprice = 5, randomprice = math.random(30, 55), desc = "Sell a Garden Hoe", category = "Tools" },
-    { itemLabel = "Empty Watering Can", itemName = "wateringcan_empty", currencyType = "cash", sellprice = 2, randomprice = math.random(30, 55), desc = "Sell a Garden Hoe", category = "Tools" },
-    { itemLabel = "Pickaxe", itemName = "pickaxe", currencyType = "cash", sellprice = 5, randomprice = math.random(30, 55), desc = "Sell a Pickaxe", category = "Tools" },
-    { itemLabel = "Hatchet", itemName = "hatchet", currencyType = "cash", sellprice = 5, randomprice = math.random(30, 55), desc = "Sell a Garden Hoe", category = "Tools" }       
+    --{ itemLabel = "Plant Trimmer", itemName = "planttrimmer", currencyType = "cash", price = 5, randomprice = math.random(30, 55), desc = "Sell Plant Trimmers", category = "Tools" },
 } 
 
 -----------------------------------------------------------------------------
@@ -102,35 +246,35 @@ Config.SellItems = {
     -----------------------------------------------------------------------------
     --------------------------------------Armadillo------------------------------
     ----------------------------------------------------------------------------- 
-        ArmadilloBlacksmith = BlackSmith_ShopItems_SELL, 
+        ArmadilloBlacksmith = _Items_SELL, 
     -----------------------------------------------------------------------------
     --------------------------------------Blackwater------------------------------
     -----------------------------------------------------------------------------    
-        BlackwaterBlacksmith = BlackSmith_ShopItems_SELL, 
+        BlackwaterBlacksmith = _Items_SELL, 
     -----------------------------------------------------------------------------
     --------------------------------------Rhodes---------------------------------
     -----------------------------------------------------------------------------        
-        RhodesBlacksmith = BlackSmith_ShopItems_SELL, 
+        RhodesBlacksmith = _Items_SELL, 
     -----------------------------------------------------------------------------
     --------------------------------------St-Denis-------------------------------
     -----------------------------------------------------------------------------      
-        StDenisBlacksmith = BlackSmith_ShopItems_SELL, 
+        StDenisBlacksmith = _Items_SELL, 
     -----------------------------------------------------------------------------
     --------------------------------------Strawberry-----------------------------
     -----------------------------------------------------------------------------      
-        StrawbBlacksmith = BlackSmith_ShopItems_SELL, 
+        StrawbBlacksmith = _Items_SELL, 
     -----------------------------------------------------------------------------
     --------------------------------------Tumbleweed-----------------------------
     -----------------------------------------------------------------------------       
-        TumbleBlacksmith = BlackSmith_ShopItems_SELL, 
+        TumbleBlacksmith = _Items_SELL, 
     -----------------------------------------------------------------------------
     --------------------------------------Valentine------------------------------
     -----------------------------------------------------------------------------        
-        ValBlacksmith = BlackSmith_ShopItems_SELL, 
+        ValBlacksmith = _Items_SELL, 
     -----------------------------------------------------------------------------
     --------------------------------------Vanhorn--------------------------------
     -----------------------------------------------------------------------------    
-        VanBlacksmith = BlackSmith_ShopItems_SELL, 
+        VanBlacksmith = _Items_SELL, 
     ----------------------------------------------------------------------------- 
 }
 -----------------------------------------------------------------------------
@@ -143,13 +287,9 @@ Config.SellItems = {
     -- price = numbers only
     -- desc = a description of the item
     -- category = where the item will be displayed at
-    BlackSmith_ShopItems_BUY = {
+    _Items_BUY = {
             -- Tools
-            { itemLabel = "Plant Trimmer", itemName = "planttrimmer", currencyType = "cash", buyprice = 20, randomprice = math.random(30, 55), desc = "Buy Plant Trimmers", category = "Tools" },
-            { itemLabel = "Garden Hoe", itemName = "hoe", currencyType = "cash", buyprice = 20, randomprice = math.random(30, 55), desc = "Buy a Garden Hoe", category = "Tools" },
-            { itemLabel = "Empty Watering Can", itemName = "wateringcan_empty", currencyType = "cash", buyprice = 2, randomprice = math.random(30, 55), desc = "Buy a Garden Hoe", category = "Tools" },
-            { itemLabel = "Pickaxe", itemName = "pickaxe", currencyType = "cash", buyprice = 20, randomprice = math.random(30, 55), desc = "Buy a Pickaxe", category = "Tools" },
-            { itemLabel = "Hatchet", itemName = "hatchet", currencyType = "cash", buyprice = 20, randomprice = math.random(30, 55), desc = "Buy a Garden Hoe", category = "Tools" }            
+            --{ itemLabel = "Plant Trimmer", itemName = "planttrimmer", currencyType = "cash", price = 20, randomprice = math.random(30, 55), desc = "Buy Plant Trimmers", category = "Tools" },
      }
 -----------------------------------------------------------------------------
 --------------------------------------BUY ITEMS ----------------------------
@@ -158,34 +298,34 @@ Config.BuyItems = {
     -----------------------------------------------------------------------------
     --------------------------------------Armadillo- ----------------------------
     -----------------------------------------------------------------------------
-        ArmadilloBlacksmith = BlackSmith_ShopItems_BUY, 
+        ArmadilloBlacksmith = _Items_BUY, 
     -----------------------------------------------------------------------------
     --------------------------------------Blackwater------------------------------
     -----------------------------------------------------------------------------  
-        BlackwaterBlacksmith = BlackSmith_ShopItems_BUY,
+        BlackwaterBlacksmith = _Items_BUY,
     -----------------------------------------------------------------------------
     --------------------------------------Rhodes---------------------------------
     -----------------------------------------------------------------------------     
-        RhodesBlacksmith = BlackSmith_ShopItems_BUY,
+        RhodesBlacksmith = _Items_BUY,
     -----------------------------------------------------------------------------
     --------------------------------------St-Denis-------------------------------
     -----------------------------------------------------------------------------         
-        StDenisBlacksmith  = BlackSmith_ShopItems_BUY, 
+        StDenisBlacksmith  = _Items_BUY, 
     -----------------------------------------------------------------------------
     --------------------------------------Strawberry-----------------------------
     -----------------------------------------------------------------------------      
-        StrawbBlacksmith = BlackSmith_ShopItems_BUY, 
+        StrawbBlacksmith = _Items_BUY, 
     -----------------------------------------------------------------------------
     --------------------------------------Tumbleweed-----------------------------
     -----------------------------------------------------------------------------      
-        TumbleBlacksmith = BlackSmith_ShopItems_BUY, 
+        TumbleBlacksmith = _Items_BUY, 
     -----------------------------------------------------------------------------
     --------------------------------------Valentine------------------------------
     -----------------------------------------------------------------------------       
-        ValBlacksmith = BlackSmith_ShopItems_BUY,
+        ValBlacksmith = _Items_BUY,
     -----------------------------------------------------------------------------
     --------------------------------------Vanhorn--------------------------------
     -----------------------------------------------------------------------------        
-        VanBlacksmith = BlackSmith_ShopItems_BUY,
+        VanBlacksmith = _Items_BUY,
     -----------------------------------------------------------------------------      
 }
